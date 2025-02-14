@@ -1,0 +1,61 @@
+.address{
+    display: inline-block;
+}
+
+.text_network{
+    width: 93%;
+    text-align: center;
+    color: #000000;
+    font-family: Verdana, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font-size: 140%;
+    margin-top: 24%;
+    height: 50px;
+}
+.button_network{
+    width: 60%;
+    height: 78px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-family: Verdana, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font-size: 120%;
+    text-align: center;
+    line-height: 78px;
+    margin-left: 17%;
+}
+
+.button_network.lan{
+    background-color: #008080;
+    margin-top: 5%;
+}
+
+.button_network.wifi{
+    background-color: #008080;
+    margin-top: 5%;
+}
+
+.button_network.update{
+    width: 34%;
+    background-color: #008080;
+    margin-left: 33%;
+}
+
+.button_network.change{
+    background: url(../images/ic_settings_small.png) #008080 no-repeat 4%;
+    margin-left: 33%;
+}
+
+.button_network.change_interface{
+    background: url(../images/ic_settings_small.png) #FFBF00  no-repeat 4%;
+    color: #000000;
+    margin-left: 33%;
+}
+
+.button_network.change_wifi{
+    background: url(../images/ic_settings_small.png) #f46241 no-repeat 4%;
+    margin-left: 33%;
+    display: none;
+}
+
+.button_network:active {
+    opacity: 0.5;
+}

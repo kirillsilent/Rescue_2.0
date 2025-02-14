@@ -1,0 +1,346 @@
+@import "cube.css";
+@import "network.css";
+@import "server.css";
+@import "../../drop.down/css/drop.down.css";
+@import "../../dialogs/css/dialog.css";
+@import "../../dialogs/css/dialog.default.css";
+@import "io.css";
+@import "net_interfaces.css";
+
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #FFFFFF;
+}
+
+.tab_container{
+    width: 100%;
+    margin-top: 2%;
+    text-align: center;
+}
+.tab_padding{padding:8px 16px !important}
+
+.tab{
+    display: inline-block;
+    width:27%;
+    text-align: center;
+    font-family: Verdana, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font-size: 200%;
+}
+
+.tab_bottom_bar{border-bottom:6px solid #008080}
+
+.tab_bottom_bar:active{border-bottom:6px solid #FFBF00}
+
+.tab_bottom_bar_selected{border-bottom:6px solid #FFBF00}
+
+.tab_background{
+    border: 1px solid #000000;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    background-color:transparent;
+}
+.tab_background:active{
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    background-color:#FFFFFF;
+    color: #000000;
+}
+.tab_background_selected{
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    background-color:#008080;
+    color: #FFFFFF;
+}
+
+.container{
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 83%;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    animation: anim_container_from_right 2s;
+    overflow-y: hidden;
+}
+
+#root_container{
+    position: absolute;
+    width: 100%;
+    height: 88%;
+}
+
+button{
+    outline: none;
+}
+
+.container.select_network{
+    display: none;
+}
+
+.container.network{
+    display: none;
+    overflow-y: scroll;
+}
+
+.container.api{
+    display: none;
+    overflow-y: scroll;
+}
+
+.container.io{
+    display: none;
+}
+
+.container.interfaces{
+    display: none;
+}
+
+.text{
+    color: #000000;
+    font-family: Verdana, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font-size: 170%;
+    line-height: 170%;
+}
+
+
+.text.sip{
+    display: inline;
+}
+.text.net_type{
+    margin-top: 3%;
+}
+
+.text.interface{
+    margin-top: 3.5%;
+}
+
+.text.device{
+    float: left;
+}
+
+.text.ssid{
+    margin-top: 3%;
+    display: none;
+}
+
+.text.err_list{
+    display: none;
+    text-align: center;
+}
+
+.text_status{
+    margin-left: 2%;
+    font-family: Verdana, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font-size: 170%;
+    line-height: 170%;
+    text-align: center;
+}
+
+.text_status.vpn{
+    margin-top: 5.8%;
+}
+
+.text_status.success{
+    color: #3A7734;
+}
+
+.text_status.ssid{
+    margin-top: 4.8%;
+    color: #FFBF00;
+    display: none;
+}
+
+.text_status.err{
+    color: #9C1A1C;
+}
+
+input[type=checkbox] {
+	visibility: hidden;
+}
+.checkbox {
+    position: relative;
+    width: 80px;
+    height: 30px;
+    background: #555;
+    border-radius: 20px;
+}
+
+.checkbox.vpn{
+    margin-top: 2%;
+    margin-left: 57%;
+}
+
+.checkbox.ip{
+    margin-top: 2%;
+    margin-left: 57%;
+}
+
+.checkbox.type{
+    margin-top: 5%;
+}
+
+.checkbox label {
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	transition: all .5s ease;
+	cursor: none;
+	position: absolute;
+	top: -7px;
+	left: -7px;
+	background: #ccc;
+}
+
+.checkbox input[type=checkbox]:checked + label {
+	left: 47px;
+    background: #008080;
+}
+.operation_container{
+    width: 100%;
+    position: absolute;
+    bottom: 4.6%;
+    overflow: hidden;
+}
+
+.button_operation{
+    display: inline-block;
+    width: 30.5%;
+    height: 70px;
+    border-radius: 8px;
+    background-color: #FFBF00;
+    color: #000000;
+    font-family: Verdana, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font-size: 150%;
+    text-align: center;
+    line-height: 70px;
+}
+
+.button_operation:active {
+    opacity: 0.5;
+}
+
+.button_operation.back{
+    margin-left: 2%;
+}
+
+.button_operation.save{
+    margin-left: 1%;
+}
+
+.button_operation.cancel{
+    width: 98%;
+    bottom: 4%;
+}
+
+.input_settings{
+    padding: 7px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 150%;
+    background-color: transparent;
+    color: #000000;
+    font-family: Verdana, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    cursor: none;
+}
+
+.input_settings.net{
+    display: inline-block;
+    width: 19%
+}
+
+.input_settings.api{
+    width: 80%;
+}
+
+.input_settings.protocol_port{
+    width: 30%;
+}
+
+.input_settings.sip_port{
+    width: 30%;
+}
+
+.input_settings.id{
+    width: 30%;
+}
+
+.input_settings.password{
+    width: 55%;
+}
+
+.input_settings.operator{
+    width: 30%;
+}
+
+.input_settings.psk{
+    width: 80%;
+    margin-top: 5%;
+    margin-left: 8.5%;
+}
+
+.input_settings.net.exception{
+    background-color: #BD3F32;
+}
+
+.text_header{
+    margin-top: 1%;
+    margin-bottom: 0.3%;
+    text-align: center;
+    color: #000000;
+    font-family: Verdana, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font-size: 170%;
+}
+
+.half{
+    float:left;
+    width: 50%;
+}
+
+#pin_container{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 2%;
+}
+
+#keyboard_container {
+    width: 100%;
+    text-align: center;
+}
+
+.list{
+    height: 75%;
+    border-radius: 8px;
+    border: 1px solid #000000;
+    width: 98%;
+    margin: 1%;
+    overflow: auto;
+}
+
+.row{
+    width: 98%;
+    margin: 1%;
+    display:inline-block;
+}
+
+.header{
+    width: 100%;
+}
+
+.header.odd{
+    background: #008080;;
+}
+
+.header.even{
+    background: #f46241;;
+}
+
+.text.header{
+    color: #FFFFFF;
+    font-family: Verdana, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    text-align: center;
+}

@@ -1,0 +1,102 @@
+#text_functional_header_volume{
+    margin-top: 1%;
+    margin-bottom: 0.3%;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: Verdana, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font-size: 140%;
+}
+
+#text_functional_footer{
+    margin-top: 2%;
+    margin-bottom: 0.3%;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: Verdana, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font-size: 140%;
+}
+.sound_cont{
+    float: left;
+    width: 100%;
+}
+.sound{
+    display: flex;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #FFBF00;
+    border-radius: 50%;
+    margin-left: 1%;
+}
+
+.sound.in {
+    margin-top: 2%;
+    background: url(../images/ic_microphone.png) #008080 no-repeat center;
+    float: left;
+}
+
+.sound.out{
+    margin-top: 2%;
+    background:url(../images/ic_bullhorn.png) #008080 no-repeat center;
+    float: left;
+}
+
+.sound_slider {
+    cursor: none;
+    -webkit-appearance: none;
+    border: 1px solid #008080;
+    width: 89%;
+    height: 5px;
+    border-radius: 5px;
+    outline: 0;
+    margin-left: 3%;
+    margin-top: 3.1%;
+    background:transparent;
+}
+
+.sound_slider:hover {
+  background-color: #008080;
+}
+
+.val{
+    display: inline;
+    width: 30px;
+    height: 20px;
+    color: #000000;
+    font-family: Verdana, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font-size: 150%;
+}
+
+.err_io{
+    display: none;
+    color: red;
+    text-align: center;
+    font-size: 1em;
+    font-family: Verdana, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    margin-top: 2.3%;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #008080;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #FFBF00;
+    cursor: none;
+    transition: .3s ease-in-out;
+}​, input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: #008080;
+  }
+  input[type="range"]::-webkit-slider-thumb:active {
+    transform: scale(1.6);
+  }
+.button_func{
+    height: 70px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-family: Verdana, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font-size: 150%;
+    text-align: center;
+    line-height: 70px;
+    margin-top: 2%;
+}

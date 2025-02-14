@@ -1,0 +1,96 @@
+card:
+  host: "http://localhost"
+  organization: idc
+  repository: card
+  apiversion: v1
+api:
+  organization: idc
+  repository: api
+  apiversion: v1
+siphone:
+  host: "http://localhost:5000"
+  organization: idc
+  repository: siphone
+  apiversion: v1
+network:
+  host: "http://localhost:5001"
+  organization: idc
+  repository: network
+  apiversion: v1
+ac-tools:
+  host: "http://localhost:5002"
+  organization: idc
+  repository: ac-tools
+  apiversion: v1
+gpio:
+  enabled: true
+  rf433:
+    - 5592368
+    - 5592332
+    - 5592512
+    - 5592323
+  organization: idc
+  repository: gpio
+  apiversion: v1
+micronaut:
+  http:
+    client:
+      read-timeout: 45s
+  router:
+    static-resources:
+      index:
+        enabled: true
+        mapping: "/index/**"
+        paths: [ "classpath:index/" ]
+      rescue:
+        enabled: true
+        mapping: "/rescue/**"
+        paths: [ "classpath:rescue/" ]
+      settings:
+        enabled: true
+        mapping: "/settings/**"
+        paths: [ "classpath:settings/"]
+
+      drop:
+        enabled: true
+        mapping: "/drop.down/**"
+        paths: [ "classpath:drop.down/" ]
+
+      rs:
+        enabled: true
+        mapping: "/rs/**"
+        paths: [ "classpath:rs/" ]
+
+      dialogs:
+        enabled: true
+        mapping: "/dialogs/**"
+        paths: [ "classpath:dialogs/" ]
+
+      utils:
+        enabled: true
+        mapping: "/utils/**"
+        paths: [ "classpath:utils/" ]
+
+      views_paths:
+        enabled: true
+        mapping: "/views.paths/**"
+        paths: [ "classpath:views.paths/" ]
+
+      jquery:
+        enabled: true
+        mapping: "/jquery/**"
+        paths: [ "classpath:jquery/" ]
+
+  server:
+    cors:
+      enabled: true
+      configurations:
+        web:
+          allowedMethods:
+            - GET
+            - POST
+            - PUT
+    idle-timeout: -1m
+    port: 8080
+  application:
+    name: rescue

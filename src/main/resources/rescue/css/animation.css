@@ -1,0 +1,17 @@
+@keyframes alert {
+    0% {
+        transition: all;
+        opacity: 1;
+        background-color: rgba(189, 63, 50, 0.7);
+        color: #000000;
+    }
+    100% {
+        transition: all;
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes marquee {
+    0% {text-indent: 100%;}
+    100% {text-indent: -100%;}
+}

@@ -1,0 +1,36 @@
+{
+  "rescue" : {
+    "id" : 51
+  },
+  "vpnNetworkEnabled" : false,
+  "centralServer" : {
+    "hostname" : "http://172.16.202.3",
+    "port" : 80
+  },
+  "sip" : {
+    "hostname" : "172.16.102.2",
+    "port" : 5060,
+    "operator" : "10000",
+    "account" : {
+      "password" : "rteN2c5G",
+      "account" : "1041"
+    },
+    "sipRegServer" : {
+      "hostname" : "http://172.16.102.2",
+      "port" : 7000
+    }
+  },
+  "io" : [ {
+    "device" : "USB Audio Device",
+    "type" : "input"
+  }, {
+    "device" : "USB Audio Device",
+    "type" : "output"
+  }, {
+    "device" : "/dev/video0",
+    "type" : "camera"
+  }, {
+    "device" : "eth0",
+    "type" : "network"
+  } ]
+}
